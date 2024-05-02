@@ -1,13 +1,19 @@
+using System.Diagnostics.Contracts;
+
 namespace modul8_1302220131
 {
-    public class mahasiswa
+    public class Mahasiswa
     {
-        public DateOnly Date { get; set; }
+        public string nama { get; set; }
+        public string nim { get; set; }
+        public List<string> course { get; set; }
+        public int year { get; set; }
 
-        public int TemperatureC { get; set; }
-
-        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-
-        public string? Summary { get; set; }
+        public Mahasiswa(string nama, string nim, List<string> course, int year) { 
+            this.nama = nama;
+            this.nim = nim;
+            this.course = course;
+            this.year = year;
+        }
     }
 }
